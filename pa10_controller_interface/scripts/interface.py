@@ -2,8 +2,9 @@
 import roslib; roslib.load_manifest('pa10_controller_interface')
 
 import sys
-
 import rospy
+
+
 from pa10controller.srv import *
 
 def getJointConfig_client():
