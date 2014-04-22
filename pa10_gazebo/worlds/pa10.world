@@ -329,11 +329,7 @@
       </link>
       <static>0</static>
     </model>
-   <include>
-<static>1</static>
-      <uri>model://pa10_description/urdf/pa10.urdf</uri>
-	
-    </include>
+   
     <state world_name='default'>
       <sim_time>2007 325000000</sim_time>
       <real_time>2065 290774616</real_time>
