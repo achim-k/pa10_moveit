@@ -98,6 +98,8 @@ class MotionControllerSimulator():
 
         # Class lock
         self.lock = threading.Lock()
+
+        self.queueCounter = 0
         
         # Motion loop update rate (higher update rates result in smoother simulated motion)
         self.update_rate = update_rate
@@ -126,7 +128,6 @@ class MotionControllerSimulator():
     """
     """
     def add_motion_waypoint(self, point):
-            
         self.motion_buffer.put(point)
             
                 
@@ -188,6 +189,9 @@ class MotionControllerSimulator():
                 if self.PA10ServiceCaller.addItemToQueue(False, point.positions) == False:
                     rospy.logerr("Error when moveing to new position")
                     self.stop()
+                    self.queueCounter = 0
+                else:
+                    self.queueCounter = self.queueCounter + 1
                 #rospy.loginfo('Moved to position: %s in %s', str(self.joint_positions), str(dur))
                 
             else:
@@ -197,6 +201,8 @@ class MotionControllerSimulator():
     def _execute_trajectory(self, last_goal_point):
         with self.lock:
             self.PA10ServiceCaller.addItemToQueue(True, last_goal_point.positions)
+            rospy.loginfo('Executing queue with %d points', self.queueCounter)
+            self.queueCounter = 0
             
 
     """
@@ -218,7 +224,7 @@ class MotionControllerSimulator():
             try:
 
                 # Execute trajectory when queue empty
-                if first_run and self.motion_buffer.empty():
+                if first_run and self.motion_buffer.empty(): #TODO do this with inherited class (check for execute=queue)
                     print "PROCESSING QUEUE"
                     self._execute_trajectory(last_goal_point)
 

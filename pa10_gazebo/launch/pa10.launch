@@ -6,9 +6,9 @@
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
-    <arg name="debug" value="false"/>  
+    <arg name="debug" value="false"/>
     <arg name="paused" value="true"/>
-  </include>
+  </include>ue
 <!--  <param name="robot_description" 
     command="$(find xacro)/xacro.py '$(find oro_barrett_sim)/test/wam_hand.urdf.xacro' prefix:=wam ops_script:=$(find oro_barrett_sim)/test/wam_hand.ops" />
 

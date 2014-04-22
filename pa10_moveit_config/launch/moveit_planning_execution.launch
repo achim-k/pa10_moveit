@@ -18,6 +18,8 @@
     <arg name="load_robot_description" value="true" />
   </include>
 
+   <param name="/move_group/trajectory_execution/execution_duration_monitoring" value="false" />
+
   <!-- run the robot simulator and action interface nodes -->
   <group if="$(arg sim)">
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
@@ -41,6 +43,6 @@
     <arg name="config" value="true"/>
   </include>
   
-  <include file="$(find pa10_moveit_config)/launch/default_warehouse_db.launch" />
+  <!-- <include file="$(find pa10_moveit_config)/launch/default_warehouse_db.launch" /> -->
 
 </launch>
