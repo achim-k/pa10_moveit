@@ -217,6 +217,7 @@
       <static>0</static>
     </model>
     <model name='WPtable_4'>
+<static>true</static>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -265,6 +266,7 @@
       <static>0</static>
     </model>
     <model name='kinect_0'>
+	<static>true</static>
       <pose>0 0 0.036 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -327,6 +329,7 @@
       </link>
       <static>0</static>
     </model>
+   
     <state world_name='default'>
       <sim_time>2007 325000000</sim_time>
       <real_time>2065 290774616</real_time>
@@ -350,6 +353,7 @@
         </link>
       </model>
       <model name='kinect_0'>
+
         <pose>-0.818718 -0.030228 2.056 -0.015222 0.978407 3.10159</pose>
         <link name='link'>
           <pose>-0.818718 -0.030228 2.056 -0.015222 0.978407 3.10159</pose>
