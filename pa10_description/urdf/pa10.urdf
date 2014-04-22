@@ -4,8 +4,11 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link0_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link0_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="cyan">
+        <color rgba="0.35 0.5 0.35 1"/>
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
@@ -18,8 +21,11 @@
     <visual>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link1_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link1_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="grey">
+        <color rgba=".6 .6 .6 1"/>
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
@@ -37,8 +43,9 @@
     <visual>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link2_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link2_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="cyan" />
     </visual>
     <collision>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
@@ -56,8 +63,9 @@
     <visual>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link3_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link3_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="grey" />
     </visual>
     <collision>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
@@ -75,8 +83,9 @@
     <visual>
       <origin xyz="0 0 -0.765" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link4_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link4_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="cyan" />
     </visual>
     <collision>
       <origin xyz="0 0 -0.765" rpy="0 -0 0"/>
@@ -94,8 +103,9 @@
     <visual>
       <origin xyz="0 0 -0.765" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link5_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link5_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="grey" />
     </visual>
     <collision>
       <origin xyz="0 0 -0.765" rpy="0 -0 0"/>
@@ -113,8 +123,9 @@
     <visual>
       <origin xyz="0 0 -1.265" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link6_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link6_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="cyan" />
     </visual>
     <collision>
       <origin xyz="0 0 -1.265" rpy="0 -0 0"/>
@@ -132,8 +143,9 @@
     <visual>
       <origin xyz="0 0 1.35" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="package://pa10_description/meshes/pa10/visual/link7_mesh.dae" scale="1 1 1" />
+        <mesh filename="package://pa10_description/meshes/pa10/visual/link7_mesh.stl" scale="1 1 1" />
       </geometry>
+      <material name="grey" />
     </visual>
     <collision>
       <origin xyz="0 0 1.35" rpy="0 -0 0"/>
