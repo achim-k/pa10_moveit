@@ -1,5 +1,5 @@
 controller_list:
-  - name: fake_maniuplator_controller
+  - name: fake_pa10Arm_controller
     joints:
       - joint_1
       - joint_2
@@ -8,3 +8,11 @@ controller_list:
       - joint_5
       - joint_6
       - joint_7
+  - name: fake_withoutLastJoint_controller
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+      - joint_4
+      - joint_5
+      - joint_6
