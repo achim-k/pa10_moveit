@@ -331,7 +331,7 @@
     </model>
    <include>
 <static>1</static>
-      <uri>model://pa10</uri>
+      <uri>model://pa10_description</uri>
 	
     </include>
     <state world_name='default'>

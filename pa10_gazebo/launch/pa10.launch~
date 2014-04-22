@@ -2,13 +2,13 @@
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find pa10_gazebo)/worlds/pa10.world"/>
-   
+    <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
     <arg name="paused" value="true"/>
-  </include>
+  </include>ue
 <!--  <param name="robot_description" 
     command="$(find xacro)/xacro.py '$(find oro_barrett_sim)/test/wam_hand.urdf.xacro' prefix:=wam ops_script:=$(find oro_barrett_sim)/test/wam_hand.ops" />
 
