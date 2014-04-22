@@ -327,7 +327,6 @@
       </link>
       <static>0</static>
     </model>
-<<<<<<< HEAD
     <model name='Mitsubishi-PA10'>
       <link name='link0'>
         <pose>0 0 0 0 -0 0</pose>
@@ -936,13 +935,6 @@
       <pose>2 -1 0 0 -0 0</pose>
       <static>0</static>
     </model>
-=======
-   <include>
-<static>1</static>
-      <uri>model://pa10_description/urdf/pa10.urdf</uri>
-	
-    </include>
->>>>>>> 992b65cc0f952aa2f41329ed6f36216f8a43b48a
     <state world_name='default'>
       <sim_time>51 247000000</sim_time>
       <real_time>51 870718479</real_time>
