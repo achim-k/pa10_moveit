@@ -11,6 +11,7 @@
       robot_interface_simulator.launch
   -->
 
+<param name="motion_update_rate" value="15" />
   <!-- industrial_robot_simulator: accepts robot commands and reports status -->
   <!-- <node name="pa10_controller_interface" pkg="pa10_controller_interface" type="pa10_controller_interface.py" /> -->
   <!-- joint_trajectory_action: provides actionlib interface for high-level robot control -->
