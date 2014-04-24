@@ -1,14 +1,26 @@
 <?xml version="1.0"?>
-<robot name="pa10">
+<robot name="pa10" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find pa10_description)/urdf/pa10.gazebo" />
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find pa10_description)/urdf/materials.xacro" />
+
+  <!-- Used for fixing robot to Gazebo 'base_link' -->
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="link0"/>
+  </joint>
+
+
   <link name="link0">
     <visual>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <geometry>
         <mesh filename="package://pa10_description/meshes/pa10/visual/link0_mesh.stl" scale="1 1 1" />
       </geometry>
-      <material name="cyan">
-        <color rgba="0.35 0.5 0.35 1"/>
-      </material>
+      <material name="cyan" />
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
@@ -16,6 +28,11 @@
         <mesh filename="package://pa10_description/meshes/pa10/collision/link0_mesh.stl" scale="1 1 1" />
       </geometry>
     </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
   </link>
   <link name="link1">
     <visual>
@@ -23,9 +40,7 @@
       <geometry>
         <mesh filename="package://pa10_description/meshes/pa10/visual/link1_mesh.stl" scale="1 1 1" />
       </geometry>
-      <material name="grey">
-        <color rgba=".6 .6 .6 1"/>
-      </material>
+      <material name="grey" />
     </visual>
     <collision>
       <origin xyz="0 0 -0.315" rpy="0 -0 0"/>
