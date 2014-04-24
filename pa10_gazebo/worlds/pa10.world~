@@ -213,11 +213,10 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose>-1 0 0 0 -0 0</pose>
       <static>0</static>
     </model>
-    <model name='WPtable_4'>
-<static>true</static>
+    <model name='WPtable'>
       <link name='link'>
         <collision name='collision'>
           <geometry>
@@ -262,12 +261,11 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose>0 3 0 0 -0 0</pose>
+      <pose>-1 -4 0 0 -0 0</pose>
       <static>0</static>
     </model>
-    <model name='kinect_0'>
-	<static>true</static>
-      <pose>0 0 0.036 0 -0 0</pose>
+    <model name='kinect'>
+      <pose>-2 4 0.036 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>0.1</mass>
@@ -329,19 +327,14 @@
       </link>
       <static>0</static>
     </model>
-   <include>
-<static>1</static>
-      <uri>model://pa10</uri>
-	
-    </include>
     <state world_name='default'>
-      <sim_time>2007 325000000</sim_time>
-      <real_time>2065 290774616</real_time>
-      <wall_time>1397910650 835289442</wall_time>
-      <model name='WPtable_4'>
-        <pose>-1.33164 0.292254 0 0 -0 3.12</pose>
+      <sim_time>51 247000000</sim_time>
+      <real_time>0 0</real_time>
+      <wall_time>1398346348 326386946</wall_time>
+      <model name='WPtable'>
+        <pose>-1.02075 -1.1514 0 0 -0 0</pose>
         <link name='link'>
-          <pose>-1.33164 0.292254 0 0 -0 3.12</pose>
+          <pose>-1.02075 -1.1514 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -356,29 +349,31 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='kinect_0'>
-
-        <pose>-0.818718 -0.030228 2.056 -0.015222 0.978407 3.10159</pose>
+      <model name='kinect'>
+        <pose>-0.498007 -0.785071 2.056 0 0.6 -3.12318</pose>
         <link name='link'>
-          <pose>-0.818718 -0.030228 2.056 -0.015222 0.978407 3.10159</pose>
+          <pose>-0.498007 -0.785071 2.056 0 0.6 -3.12318</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='scene'>
-        <pose>-1.2919 0.801512 0.035405 -1e-06 2e-06 -0.022716</pose>
+        <pose>-0.999799 0 0.035406 3e-06 -2e-06 -3.9e-05</pose>
         <link name='link'>
-          <pose>-1.2919 0.801512 0.035405 -1e-06 2e-06 -0.022716</pose>
+          <pose>-0.999799 0 0.035406 3e-06 -2e-06 -3.9e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
     </state>
+<include>
+ <uri>model://pa10</uri>
+</include>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>1.45996 0.077892 6.13112 3.36695e-18 1.02953 3.12034</pose>
+        <pose>-8.2967 -9.88143 10.3457 0 0.785796 0.793003</pose>
         <view_controller>orbit</view_controller>
       </camera>
     </gui>
