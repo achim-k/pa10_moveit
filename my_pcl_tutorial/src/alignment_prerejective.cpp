@@ -34,7 +34,7 @@ main (int argc, char **argv)
   FeatureCloudT::Ptr scene_features (new FeatureCloudT);
   
   // Get input object and scene
-  reader.read ("Cup_SDU_downsampled.pcd", *object);
+  reader.read ("Cup_scaled_2.pcd", *object);
   reader.read ("Scene_Cup_1_smoothed.pcd", *scene);
   
   // Downsample

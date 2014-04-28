@@ -12,7 +12,7 @@ main (int argc, char** argv)
   // Fill in the cloud data
   pcl::PCDReader reader;
   // Replace the path below with the path where you saved your file
-  reader.read ("Cup_SDU.pcd", *cloud); // Remember to download the file first!
+  reader.read ("Cup_scaled_2.pcd", *cloud); // Remember to download the file first!
 
   std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height
        << " data points (" << pcl::getFieldsList (*cloud) << ").";
@@ -27,7 +27,7 @@ main (int argc, char** argv)
        << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
 
   pcl::PCDWriter writer;
-  writer.write ("Cup_SDU_downsampled.pcd", *cloud_filtered,
+  writer.write ("Cup_scaled_2_downsampled.pcd", *cloud_filtered,
          Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
 
   std::cerr << "Points" << cloud_filtered << std::endl;
