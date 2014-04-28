@@ -5,7 +5,7 @@
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find pa10_description)/urdf/materials.xacro" />
   <!-- Import gripper -->
-  <xacro:include filename="$(find schunk_description)/urdf/pg70/pg70.urdf.xacro" />
+  <xacro:include filename="$(find pg70_description)/urdf/pg70.urdf.xacro" />
   <!-- Used for fixing robot to Gazebo 'base_link' -->
   <link name="world"/>
 
