@@ -4,7 +4,8 @@
   <xacro:include filename="$(find pa10_description)/urdf/pa10.gazebo" />
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find pa10_description)/urdf/materials.xacro" />
-
+  <!-- Import gripper -->
+  <xacro:include filename="$(find schunk_description)/urdf/pg70/pg70.urdf.xacro" />
   <!-- Used for fixing robot to Gazebo 'base_link' -->
   <link name="world"/>
 
@@ -230,4 +231,9 @@
     <limit lower="-3.14159" upper="3.14159" effort="100000" velocity="0.5" />
     <dynamics damping="0.2" friction="0" />
   </joint>
+
+  <!-- gripper -->
+  <xacro:schunk_pg70 name="gripper" parent="link7">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+  </xacro:schunk_pg70>
 </robot>
