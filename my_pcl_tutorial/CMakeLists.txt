@@ -170,7 +170,7 @@ cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 project(voxel_grid)
 
-find_package(PCL 1.2 REQUIRED)
+find_package(PCL 1.7 REQUIRED)
 
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
@@ -185,22 +185,12 @@ target_link_libraries (cylinder_segmentation ${PCL_LIBRARIES})
 add_executable (Triangulation src/Triangulation.cpp)
 target_link_libraries (Triangulation ${PCL_LIBRARIES})
 
-add_executable (correspondence_grouping src/correspondence_grouping.cpp)
-target_link_libraries (correspondence_grouping ${PCL_LIBRARIES})
-
 add_executable (ransac src/ransac.cpp)
 target_link_libraries (ransac ${PCL_LIBRARIES})
 
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-
-project(alignment_prerejective)
-
-find_package(PCL 1.7 REQUIRED)
-
-include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})
-add_definitions(${PCL_DEFINITIONS})
-
 add_executable (alignment_prerejective src/alignment_prerejective.cpp)
 target_link_libraries (alignment_prerejective ${PCL_LIBRARIES})
+
+add_executable (Kdtree src/Kdtree.cpp)
+target_link_libraries (Kdtree ${PCL_LIBRARIES})
 
