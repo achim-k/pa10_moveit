@@ -194,3 +194,6 @@ target_link_libraries (alignment_prerejective ${PCL_LIBRARIES})
 add_executable (Kdtree src/Kdtree.cpp)
 target_link_libraries (Kdtree ${PCL_LIBRARIES})
 
+add_executable (PassThrough src/PassThrough.cpp)
+target_link_libraries (PassThrough ${PCL_LIBRARIES})
+
