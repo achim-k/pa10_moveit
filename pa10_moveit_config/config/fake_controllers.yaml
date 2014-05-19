@@ -1,5 +1,5 @@
 controller_list:
-  - name: fake_pa10Arm_controller
+  - name: fake_pa10_controller
     joints:
       - joint_1
       - joint_2
@@ -10,5 +10,4 @@ controller_list:
       - joint_7
   - name: fake_pg70_controller
     joints:
-      - gripper_finger_joint
-      - gripper_finger_mimic_joint
+      - gripper_finger

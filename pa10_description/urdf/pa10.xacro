@@ -12,6 +12,7 @@
   <joint name="fixed" type="fixed">
     <parent link="world"/>
     <child link="link0"/>
+    <origin rpy="0 0 0.523" xyz="0 0 .3"/>
   </joint>
 
 
@@ -230,6 +231,7 @@
     <axis   xyz="0 0 1"/>
     <limit lower="-3.14159" upper="3.14159" effort="100000" velocity="0.5" />
     <dynamics damping="0.2" friction="0" />
+    <!--<safety_controller k_position="100" k_velocity="1.5" soft_lower_limit="-2.857" soft_upper_limit="2.857"/>-->
   </joint>
 
   <!-- gripper -->
