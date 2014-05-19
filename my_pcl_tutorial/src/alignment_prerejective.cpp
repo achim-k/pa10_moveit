@@ -34,8 +34,8 @@ main (int argc, char **argv)
   FeatureCloudT::Ptr scene_features (new FeatureCloudT);
   
   // Get input object and scene
-  reader.read ("Cup_scaled_2.pcd", *object);
-  reader.read ("Scene_Cup_1_smoothed.pcd", *scene);
+  reader.read ("Cup_real_scaled_normals.pcd", *object);
+  reader.read ("Cup_real_scale_z_inverted.pcd", *scene);
   
   // Downsample
   pcl::console::print_highlight ("Downsampling...\n");
@@ -76,7 +76,7 @@ main (int argc, char **argv)
   align.setCorrespondenceRandomness (2); // Number of nearest features to use
   align.setSimilarityThreshold (0.6f); // Polygonal edge length similarity threshold
   align.setMaxCorrespondenceDistance (1.5f * leaf); // Set inlier threshold
-  align.setInlierFraction (0.25f); // Set required inlier fraction
+  align.setInlierFraction (0.90f); // Set required inlier fraction
   align.align (*object_aligned);
   
   if (align.hasConverged ())
